@@ -1,0 +1,94 @@
+/* Navbar styles */
+.site-title {
+    font-family: Luminari;
+    font-weight: 900;
+    font-size: 38px;
+    text-transform: none;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.site-title:hover {
+    text-decoration: underline;
+}
+
+.socials-list {
+    list-style: none;
+    flex: content;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.socials-list li {
+    display: inline;
+    flex: content;
+}
+
+.socials-icon a {
+    display: inline;
+    padding-left: 3px;
+    padding-right: 15px;
+    border: 1px transparent;
+    margin-right: 0px;
+}
+
+.socials-icon a img {
+    height: 30px;
+    width: 30px;
+}
+
+.active {
+    color: #1b7fd7 !important;
+}
+
+#nav li a:hover {
+    color: #1b7fd7 !important;
+}
+
+/* Homepage carousel styles */
+.slide-item {
+    transition: transform 0.5s ease;
+}
+
+#myCarousel div img {
+    height: calc(100vh - 83px);
+    object-fit: cover;
+}
+
+.slide-title {
+    top: 45% !important;
+    bottom: 45% !important;
+}
+
+.slide-title a {
+    text-decoration: none;
+    color: darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+
+.slide-title h1 {
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+
+.slide-title h5 {
+    color: darkturquoise;
+    font-size: 28px;
+}
+
+.slide-title a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    .socials-list {
+        list-style: none;
+        flex: content;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+}

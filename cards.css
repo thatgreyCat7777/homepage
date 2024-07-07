@@ -1,0 +1,65 @@
+/* Card styles */
+.card {
+    width: 50vw;
+    height: auto;
+    --bs-card-border-color: black;
+    --bs-card-border-radius: 0px;
+    background-color: black;
+}
+
+.card-main {
+    color: #cbcbcb;
+    font-size: 97%;
+    text-wrap: balance;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards div div {
+    flex: 1 0 0%;
+    min-height: calc(calc(100vh - 83px) * 0.298);
+    background-color: black;
+}
+
+@media screen and (max-width: 1024px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100vw;
+        height: auto;
+    }
+
+    .cards div img {
+        height: auto;
+        width: 100vw;
+        object-fit: cover;
+    }
+
+    .cards div div {
+        flex: none;
+        height: auto;
+    }
+}
+
+.cards div div h5 {
+    color: #86b7fe;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 220%;
+}
+
+.cards div img {
+    height: calc(calc(100vh - 83px) * 0.7);
+    width: auto;
+    object-fit: cover;
+}
+
+.card-img-top {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
