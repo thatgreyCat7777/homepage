@@ -2,84 +2,59 @@
 
 <html lang="en">
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="cards.css">
-        <script src="navbar.js"></script>
-        <script>
-        </script>
-        <title>About Me</title>
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/151648110?v=4">
+    <script src="navbar.js"></script>
+    <title>About Me</title>
+</head>
 
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand site-title" href="index.html">Cat7777</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav" id="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="abtme.html">About Me</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="hobbies.html">Hobbies</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="cats.html">Cats</a>
-                            </li>
-                        </ul>
-                        <div class="d-flex">
-                            <ul class="socials-list">
-                                <li class="socials-icon"><a href="https://www.instagram.com/thatgreycat7777?igsh=MzNlNGNkZWQ4Mg=="><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/800px-Instagram_icon.png" alt="instagram logo"></a></li>
-                                <li class="socials-icon"><a href="https://youtube.com/@cat-7777?si=S_StE1bnrYz4emTG"><img src="https://static.vecteezy.com/system/resources/thumbnails/023/986/704/small/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png" alt="youtube icon"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="cards">
-                <div class="card">
-                    <img src="https://www.herzing.edu/sites/default/files/2020-09/it_computer_programming.jpg" class="card-img-top" alt="Programming">
-                    <div class="card-body">
-                        <h5 class="card-title">Background</h5>
-                        <p class="card-text card-main">
-                            I'm born and raised singaporean living in singapore.
-                            I am currently an secondary school student at Yuhua secondary school and taking this course,
-                            CS50.
-                            A few of my hobbies include programming and messing around with lasers for fun.
-                            I got into programming at the age of 14, learning how to program in C# for using the Unity
-                            game engine for game development.
-                            I got into lasers as an hobby when i was around 11 years old as it piqued my interest due to
-                            what i could learn about light from it.
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/630317507c39bc12ccfa8c6c/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds" class="card-img-top" alt="Skills">
-                    <div class="card-body">
-                        <h5 class="card-title">Skills</h5>
-                        <ul class="card-text card-main">
-                            <li>Intermediate knowledge of an systems programming language, C</li>
-                            <li>Intermediate knowledge of algorithms such as Binary Search and Merge Sort</li>
-                            <li>Intermediate knowledge of data structures such as Hash tables and Tries</li>
-                            <li>Basic knowledge of front-end web development with Html, Css, and Javascript</li>
-                            <li>Basic knowledge of mathematics with Intermediate topics like logarithms and indices</li>
-                        </ul>
-                    </div>
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+    <main>
+        <div class="cards">
+            <div class="card">
+                <img src="https://www.herzing.edu/sites/default/files/2020-09/it_computer_programming.jpg"
+                    class="card-img-top" alt="Programming">
+                <div class="card-body">
+                    <h5 class="card-title">Background</h5>
+                    <p class="card-text card-main">
+                        I'm born and raised singaporean living in singapore.
+                        I am currently an secondary school student at Yuhua secondary school and taking this course,
+                        CS50.
+                        A few of my hobbies include programming and messing around with lasers for fun.
+                        I got into programming at the age of 14, learning how to program in C# for using the Unity
+                        game engine for game development.
+                        I got into lasers as an hobby when i was around 11 years old as it piqued my interest due to
+                        what i could learn about light from it.
+                    </p>
                 </div>
             </div>
-        </main>
-    </body>
+            <div class="card">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/630317507c39bc12ccfa8c6c/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds"
+                    class="card-img-top" alt="Skills">
+                <div class="card-body">
+                    <h5 class="card-title">Skills</h5>
+                    <ul class="card-text card-main">
+                        <li>Intermediate knowledge of an systems programming language, C</li>
+                        <li>Intermediate knowledge of algorithms such as Binary Search and Merge Sort</li>
+                        <li>Intermediate knowledge of data structures such as Hash tables and Tries</li>
+                        <li>Basic knowledge of front-end web development with Html, Css, and Javascript</li>
+                        <li>Basic knowledge of mathematics with Intermediate topics like logarithms and indices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
 
 </html>
