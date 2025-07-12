@@ -1,4 +1,3 @@
-// Checks which page the user is in and activates the correct page based off it
 document.addEventListener("DOMContentLoaded", function () {
     // Loads navbar into page
     fetch("navbar.html")
@@ -6,10 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
             document.querySelector("#navbar-placeholder").innerHTML = data;
         })
+        // Checks which page the user is in and activates the correct page based off it
         .then((data) => {
             var nav = document.querySelectorAll("#nav li a");
             for (let i = 0; i < nav.length; i++) {
-                if (document.URL.includes(nav[i].getAttribute("href"))) {
+                if (document.location.pathname.length == 1)
+                {
+                    nav[i].classList.add("active");
+                    break;
+                }
+                if (document.location.pathname.includes(nav[i].getAttribute("href"))) {
                     nav[i].classList.add("active");
                 } else {
                     nav[i].classList.remove("active");
@@ -20,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     this.classList.add("active");
                 });
+                
             }
+            
+            console.log(document.location.pathname);
         });
 });

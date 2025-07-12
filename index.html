@@ -13,46 +13,7 @@
     <link rel="icon" href="https://avatars.githubusercontent.com/u/151648110?v=4">
     <script src="navbar.js"></script>
     <script src="cats.js"></script>
-    <script>
-        function autoClickButton() {
-            var nextButton = document.querySelector("#next");
-            var myInterval = setInterval(function () {
-                nextButton.click();
-            }, 5000);
-            return myInterval;
-        }
-
-        function resetInterval(interval) {
-            clearInterval(interval);
-            return autoClickButton();
-        }
-        window.onload = function () {
-            var interval = autoClickButton();
-            var sliders = document.querySelectorAll("#sliders button");
-            var buttons = document.querySelectorAll("#carouselExampleCaptions button");
-            for (var i = 0, len = sliders.length; i < len; i++) {
-                sliders[i].addEventListener('click', function () {
-                    interval = resetInterval(interval);
-                });
-            }
-            for (var i = 0, len = buttons.length; i < len; i++) {
-                buttons[i].addEventListener('click', function () {
-                    interval = resetInterval(interval);
-                });
-            }
-            document.addEventListener('keydown', function (event) {
-                if ([37, 65].includes(event.keyCode)) {
-                    document.querySelector('#previous').click();
-                } else if ([39, 68].includes(event.keyCode)) {
-                    document.querySelector('#next').click();
-                }
-            });
-        }
-        var viewportWidth = window.innerWidth;
-        var viewportHeight = window.innerHeight;
-        console.log(viewportWidth);
-        console.log(viewportHeight);
-    </script>
+    <script src="slides.js"></script>
     <title>Home</title>
 </head>
 
@@ -61,6 +22,7 @@
         <div id="navbar-placeholder"></div>
     </header>
     <main>
+        <!-- Slides start -->
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators" id="sliders">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -122,6 +84,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <!-- Slides end -->
     </main>
 </body>
 
