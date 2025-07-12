@@ -18,7 +18,7 @@
     flex-direction: row;
 }
 
-.cards div div {
+.cards div {
     flex: 1 0 0%;
     min-height: calc(calc(100vh - 83px) * 0.298);
     background-color: black;
@@ -35,7 +35,12 @@
         height: auto;
     }
 
-    .cards div img {
+    .card img {
+        height: auto;
+        width: 100vw;
+        object-fit: cover;
+    }
+    .card video {
         height: auto;
         width: 100vw;
         object-fit: cover;
@@ -47,13 +52,13 @@
     }
 }
 
-.cards div div h5 {
+.card div h5 {
     color: #86b7fe;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 220%;
 }
 
-.cards div img {
+.card img {
     height: calc(calc(100vh - 83px) * 0.7);
     width: auto;
     object-fit: cover;

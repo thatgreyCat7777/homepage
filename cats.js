@@ -8,7 +8,7 @@ function get_cat() {
 }
 document.addEventListener('DOMContentLoaded', function() {
     get_cat();
-    let button = document.querySelector("#get-cat-btn")
+    let button = document.querySelector("#get-cat-btn");
     if (button != null) {
         button.addEventListener("click", function() {
             get_cat();

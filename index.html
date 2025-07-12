@@ -1,91 +1,148 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"
+        ></script>
+        <link href="styles.css" rel="stylesheet" />
+        <link
+            rel="icon"
+            href="https://avatars.githubusercontent.com/u/151648110?v=4"
+        />
+        <script src="navbar.js"></script>
+        <script src="cats.js"></script>
+        <script src="slides.js"></script>
+        <title>Home</title>
+    </head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <link href="styles.css" rel="stylesheet">
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/151648110?v=4">
-    <script src="navbar.js"></script>
-    <script src="cats.js"></script>
-    <script src="slides.js"></script>
-    <title>Home</title>
-</head>
-
-<body>
-    <header>
-        <div id="navbar-placeholder"></div>
-    </header>
-    <main>
-        <!-- Slides start -->
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators" id="sliders">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
+    <body>
+        <header>
+            <div id="navbar-placeholder"></div>
+        </header>
+        <main>
+            <!-- Slides start -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators" id="sliders">
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 4"
+                    ></button>
+                </div>
+                <div class="carousel-inner" id="myCarousel">
+                    <div class="carousel-item slide-item active">
+                        <img
+                            src="https://userguiding.com/wp-content/uploads/2023/05/how-to-create-welcome-page-1.jpg"
+                            class="d-block w-100"
+                            alt="Welcome"
+                        />
+                        <div class="carousel-caption d-md-block slide-title">
+                            <a href="index.html">
+                                <h1>Welcome!</h1>
+                            </a>
+                            <h5>Hi! Name's Devon</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item slide-item">
+                        <img
+                            src="aboutme.jpg"
+                            class="d-block w-100"
+                            alt="About Me"
+                        />
+                        <div class="carousel-caption d-md-block slide-title">
+                            <a href="about.html">
+                                <h1>About Me</h1>
+                            </a>
+                            <h5>A brief introduction about myself</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item slide-item">
+                        <img
+                            src="hobbies.jpg"
+                            class="d-block w-100"
+                            alt="Hobbies"
+                        />
+                        <div class="carousel-caption d-md-block slide-title">
+                            <a href="projects.html">
+                                <h1>Projects</h1>
+                            </a>
+                            <h5>Projects and Achievements</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item slide-item">
+                        <img
+                            src="#"
+                            class="d-block w-100"
+                            alt="Cats!"
+                            id="cats-img"
+                        />
+                        <div class="carousel-caption d-md-block slide-title">
+                            <a href="cats.html">
+                                <h1>Cats!</h1>
+                            </a>
+                            <h5>An simple example of api usage</h5>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev"
+                    id="previous"
+                >
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next"
+                    id="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="carousel-inner" id="myCarousel">
-                <div class="carousel-item slide-item active">
-                    <img src="https://userguiding.com/wp-content/uploads/2023/05/how-to-create-welcome-page-1.jpg"
-                        class="d-block w-100" alt="Welcome">
-                    <div class="carousel-caption d-md-block slide-title">
-                        <a href="index.html">
-                            <h1>Welcome!</h1>
-                        </a>
-                        <h5>Hi! Name's Devon</h5>
-                    </div>
-                </div>
-                <div class="carousel-item slide-item">
-                    <img src="aboutme.jpg" class="d-block w-100" alt="About Me">
-                    <div class="carousel-caption d-md-block slide-title">
-                        <a href="abtme.html">
-                            <h1>About Me</h1>
-                        </a>
-                        <h5>A brief introduction about myself</h5>
-                    </div>
-                </div>
-                <div class="carousel-item slide-item">
-                    <img src="hobbies.jpg" class="d-block w-100" alt="Hobbies">
-                    <div class="carousel-caption d-md-block slide-title">
-                        <a href="hobbies.html">
-                            <h1>Hobbies</h1>
-                        </a>
-                        <h5>A brief introduction to my hobbies</h5>
-                    </div>
-                </div>
-                <div class="carousel-item slide-item">
-                    <img src="#" class="d-block w-100" alt="Cats!" id="cats-img">
-                    <div class="carousel-caption d-md-block slide-title">
-                        <a href="cats.html">
-                            <h1>Cats!</h1>
-                        </a>
-                        <h5>An simple example of api usage</h5>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev" id="previous">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next" id="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <!-- Slides end -->
-    </main>
-</body>
-
+            <!-- Slides end -->
+        </main>
+    </body>
 </html>
