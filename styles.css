@@ -55,14 +55,18 @@
     height: calc(100vh - 83px);
     object-fit: cover;
 }
+
 #myCarousel div video {
     height: calc(100vh - 83px);
     object-fit: cover;
 }
 
 .slide-title {
-    top: 20% !important;
-    bottom: 45% !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-content: center;
 }
 
 .slide-title a {

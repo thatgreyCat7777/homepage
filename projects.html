@@ -23,11 +23,16 @@
         <script src="navbar.js"></script>
         <script>
             window.onload = function () {
-                console.log(window.location.pathname); 
-                const urlPath = window.location.pathname
-                const homePath = urlPath.substring(0, urlPath.lastIndexOf("/")+1)
-                console.log(homePath)
-                document.querySelector("#recursion").setAttribute("src", homePath);
+                console.log(window.location.pathname);
+                const urlPath = window.location.pathname;
+                const homePath = urlPath.substring(
+                    0,
+                    urlPath.lastIndexOf("/") + 1
+                );
+                console.log(homePath);
+                document
+                    .querySelector("#recursion")
+                    .setAttribute("src", homePath);
             };
         </script>
         <title>Projects</title>
