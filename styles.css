@@ -55,27 +55,31 @@
     height: calc(100vh - 83px);
     object-fit: cover;
 }
+#myCarousel div video {
+    height: calc(100vh - 83px);
+    object-fit: cover;
+}
 
 .slide-title {
-    top: 45% !important;
+    top: 40% !important;
     bottom: 45% !important;
 }
 
 .slide-title a {
     text-decoration: none;
-    color: darkblue;
+    color: rgb(50, 184, 32);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
 }
 
 .slide-title h1 {
-    color: blue;
+    color: rgb(40, 255, 12);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
 }
 
 .slide-title h5 {
-    color: darkturquoise;
+    color: rgb(40, 255, 12);
     font-size: 28px;
 }
 
