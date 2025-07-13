@@ -40,11 +40,13 @@
         width: 100vw;
         object-fit: cover;
     }
+
     .card video {
         height: auto;
         width: 100vw;
         object-fit: cover;
     }
+
     .card iframe {
         height: auto;
         width: 100vw;
@@ -68,11 +70,13 @@
     width: auto;
     object-fit: cover;
 }
+
 .card video {
     height: calc(calc(100vh - 83px) * 0.7);
     width: auto;
     object-fit: cover;
 }
+
 .card iframe {
     height: calc(calc(100vh - 83px) * 0.7);
     width: auto;

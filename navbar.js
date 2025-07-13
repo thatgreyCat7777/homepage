@@ -9,12 +9,19 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
             var nav = document.querySelectorAll("#nav li a");
             for (let i = 0; i < nav.length; i++) {
-                if (document.location.pathname.charAt(document.location.pathname.length-1) == '/')
-                {
+                if (
+                    document.location.pathname.charAt(
+                        document.location.pathname.length - 1
+                    ) == "/"
+                ) {
                     nav[i].classList.add("active");
                     break;
                 }
-                if (document.location.pathname.includes(nav[i].getAttribute("href"))) {
+                if (
+                    document.location.pathname.includes(
+                        nav[i].getAttribute("href")
+                    )
+                ) {
                     nav[i].classList.add("active");
                 } else {
                     nav[i].classList.remove("active");
@@ -25,9 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     this.classList.add("active");
                 });
-                
             }
             console.log(document.location.pathname);
-            console.log(document.location.pathname.charAt(document.location.pathname.length-1));
+            console.log(
+                document.location.pathname.charAt(
+                    document.location.pathname.length - 1
+                )
+            );
         });
 });
