@@ -2,7 +2,7 @@ function autoClickButton() {
     var nextButton = document.querySelector("#next");
     var myInterval = setInterval(function () {
         nextButton.click();
-    }, 5000);
+    }, 8500);
     return myInterval;
 }
 
