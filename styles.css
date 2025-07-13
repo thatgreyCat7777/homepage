@@ -73,18 +73,21 @@
     text-decoration: none;
     color: rgb(50, 184, 32);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 60px;
+    font-size: 4vmax;
 }
 
 .slide-title h1 {
     color: rgb(40, 255, 12);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 60px;
+    font-size: 4vmax;
 }
 
 .slide-title h5 {
     color: rgb(40, 255, 12);
-    font-size: 28px;
+    font-size: 1.5vmax;
+}
+.slide-title h6 {
+    font-size: 1.1vmax;
 }
 
 .slide-title a:hover {
