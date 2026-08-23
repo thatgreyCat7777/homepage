@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "c:\\Users\\devon\\.vscode\\extensions\\polymatepteltd.marlin-controller-1.0.2\\dist"
+    ]
+}
