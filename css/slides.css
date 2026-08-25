@@ -1,0 +1,48 @@
+/* Homepage carousel styles */
+.slide-item {
+    transition: transform 0.5s ease;
+}
+
+#myCarousel div img {
+    height: calc(100vh - 83px);
+    object-fit: cover;
+}
+
+#myCarousel div video {
+    height: calc(100vh - 83px);
+    object-fit: cover;
+}
+
+.slide-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-content: center;
+}
+
+.slide-title a {
+    text-decoration: none;
+    color: rgb(50, 184, 32);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4vmax;
+}
+
+.slide-title h1 {
+    color: rgb(40, 255, 12);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4vmax;
+}
+
+.slide-title h5 {
+    color: rgb(40, 255, 12);
+    font-size: 1.5vmax;
+}
+
+.slide-title h6 {
+    font-size: 1.1vmax;
+}
+
+.slide-title a:hover {
+    text-decoration: underline;
+}
