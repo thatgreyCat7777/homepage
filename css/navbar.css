@@ -20,7 +20,7 @@
     margin-bottom: 0px;
 }
 
-.socials-list li {
+.socials-icon {
     display: inline;
     flex: content;
 }
@@ -54,4 +54,9 @@
         margin-bottom: 0px;
         padding-left: 0px;
     }
+}
+
+.navbar {
+    /* Black background with 50% opacity */
+    /* background-color: rgba(0, 0, 0, 0.89) !important; */
 }

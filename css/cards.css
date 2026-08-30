@@ -19,9 +19,9 @@
 }
 
 .cards div {
-    flex: 1 0 0%;
-    min-height: calc(calc(100vh - 83px) * 0.298);
-    background-color: black;
+    /* flex: 1 0 0%; */
+    /* min-height: calc(calc(100vh - 83px) * 0.298); */
+    /* background-color: black; */
 }
 
 @media screen and (max-width: 1024px) {

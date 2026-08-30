@@ -19,23 +19,22 @@
     left: 50%;
     transform: translate(-50%, -50%);
     align-content: center;
+    mix-blend-mode: difference;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    backdrop-filter: blur(5px);
 }
 
 .slide-title a {
     text-decoration: none;
-    color: rgb(50, 184, 32);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 4vmax;
 }
 
 .slide-title h1 {
-    color: rgb(40, 255, 12);
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 4vmax;
 }
 
 .slide-title h5 {
-    color: rgb(40, 255, 12);
     font-size: 1.5vmax;
 }
 
@@ -45,4 +44,7 @@
 
 .slide-title a:hover {
     text-decoration: underline;
+}
+#sliders {
+    mix-blend-mode: difference;
 }

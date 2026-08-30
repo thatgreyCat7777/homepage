@@ -1,0 +1,487 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"
+        ></script>
+        <link href="css/navbar.css" rel="stylesheet" />
+        <link href="css/cards.css" rel="stylesheet" />
+        <link href="css/map.css" rel="stylesheet" />
+        <link
+            rel="icon"
+            href="https://avatars.githubusercontent.com/u/151648110?v=4"
+        />
+        <script src="js/navbar.js"></script>
+        <title>Title</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="navbar-placeholder"></div>
+        </header>
+        <main>
+            <!-- ! Copy this to get cards at the bottom -->
+            <div class="cards">
+                <div class="card">
+                    <!-- ! Two components: image -->
+                    <div class="map-container">
+                        <svg viewBox="0 0 500 500" class="map-background">
+                            <rect
+                                style="fill: #f5f0e5"
+                                width="50vw"
+                                height="600"
+                            ></rect>
+                            <path
+                                style="fill: #90daee"
+                                d="M0,367.82c5.83-4.39,14.42-10.16,25.59-15.34,4.52-2.09,43.19-19.51,79.55-11.93,36.1,7.52,35.75,32.55,78.41,60.23,46.34,30.06,109.47,41.21,123.32,22.1,11.95-16.49-22.61-41.92-13.66-84.6,4.85-23.1,22.33-50.71,47.73-58.52,42.42-13.05,78.83,39.45,102.84,23.86,15.81-10.26.01-32.87,22.73-74.43,5.8-10.62,11.65-21.15,11.93-36.93.28-15.69-5.63-26.64-7.95-32.39-6.66-16.45-6.21-45.15,28.84-98.55.23,146.23.46,292.46.69,438.69H0v-132.18Z"
+                            ></path>
+                        </svg>
+                        <div class="map-cities">
+                            <div style="--x: 5; --y: 67" class="map-city">
+                                <div class="map-city__label">
+                                    <span data-icon="🏖️" class="map-city__sign"
+                                        >Beach city</span
+                                    >
+                                </div>
+                            </div>
+                            <div style="--x: 32; --y: 32" class="map-city">
+                                <div class="map-city__label">
+                                    <span
+                                        data-icon="🌷"
+                                        class="map-city__sign anim anim-grow"
+                                        >Flower city</span
+                                    >
+                                </div>
+                            </div>
+                            <div style="--x: 58; --y: 83" class="map-city">
+                                <div class="map-city__label">
+                                    <span
+                                        data-icon="🏄"
+                                        class="map-city__sign anim anim-slidein"
+                                        >Surf city</span
+                                    >
+                                </div>
+                            </div>
+                            <div style="--x: 65; --y: 22" class="map-city">
+                                <div class="map-city__label">
+                                    <span data-icon="🏛️" class="map-city__sign"
+                                        >Capital city</span
+                                    >
+                                </div>
+                            </div>
+                            <div style="--x: 87; --y: 58" class="map-city">
+                                <div class="map-city__label">
+                                    <span data-icon="🎢" class="map-city__sign"
+                                        >Funland</span
+                                    >
+                                </div>
+                            </div>
+                            <div style="--x: 94; --y: 38" class="map-city">
+                                <div class="map-city__label">
+                                    <span
+                                        data-icon="🌊"
+                                        class="map-city__sign anim anim-slidein"
+                                        >Coast city</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ! and text -->
+                    <div class="card-body">
+                        <h5 class="card-title">Skills</h5>
+                        <ul class="card-text card-main">
+                            <li><b>Programming 💻</b></li>
+                            <ul>
+                                <li>
+                                    <strong>C++</strong> - Built modular Unreal
+                                    Engine 5 systems (FPS movement, 3D math)
+                                </li>
+                                <li>
+                                    <strong>C</strong> - Implemented image
+                                    processing algorithms (Sobel filter)
+                                </li>
+                                <li>
+                                    <strong>Python</strong> - CS50x projects,
+                                    competitive programming (CPIC SG)
+                                </li>
+                                <li>
+                                    <strong>HTML/CSS/JS</strong> - Developed
+                                    personal website from scratch
+                                </li>
+                            </ul>
+                            <li><b>Mathematics 📊</b></li>
+                            <ul>
+                                <li>
+                                    <strong>Linear Algebra</strong> - Derived 3D
+                                    rotation matrices for game physics
+                                </li>
+                                <li>
+                                    <strong>Algorithm Design</strong> - NOI/CPIC
+                                    training in optimization
+                                </li>
+                                <li>
+                                    <strong>Trigonometry</strong> - Created
+                                    interactive visualizations (Desmos)
+                                </li>
+                            </ul>
+
+                            <li><b>Game Development 🎮</b></li>
+                            <ul>
+                                <li>
+                                    <strong>Unreal Engine 5</strong> -
+                                    Architected C++ movement systems
+                                    (wall-running, sliding)
+                                </li>
+                            </ul>
+                            <li><b>Leadership 👥</b></li>
+                            <ul>
+                                <li>
+                                    <strong>Peer Mentoring</strong> - Designed
+                                    math lessons (unit circle proofs)
+                                </li>
+                                <li>
+                                    <strong>Team Leadership</strong> - Wushu
+                                    Vice-Captain, Peer Support Leader
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <iframe src="pdf/COP_Lim Zhi Yuan Devon.pdf"></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Achievements</h5>
+                        <ul class="card-text card-main">
+                            <li>
+                                <strong>Sterling Award</strong>
+                                <ul>
+                                    <li>
+                                        Best in Chemistry (Sec 3, 2024)
+                                        <a
+                                            href="pdf/Sterling cert chemistry.pdf"
+                                            target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                    <li>
+                                        Best in Physics (Sec 3, 2024)
+                                        <a
+                                            href="pdf/Sterling cert physics.pdf"
+                                            target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                    <li>Best in Science (Sec 2, 2023)</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong
+                                    >National Olympiad in Informatics</strong
+                                >
+                                <ul>
+                                    <li>
+                                        Certificate of Participation (2025)
+                                        <a
+                                            href="pdf/COP_Lim Zhi Yuan Devon.pdf"
+                                            target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong
+                                    >Singapore Junior Chemistry Olympiad</strong
+                                >
+                                <ul>
+                                    <li>Certificate of Merit (2025)</li>
+                                    <li>Certificate of Participation (2024)</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong
+                                    >Singapore Junior Physics Olympiad</strong
+                                >
+                                <ul>
+                                    <li>
+                                        Certificate of Participation (2024,
+                                        2025)
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong>Harvard University CS50x</strong>
+                                <ul>
+                                    <li>
+                                        Completed (edX, 2025)
+                                        <a
+                                            href="https://cs50.harvard.edu/certificates/254d1483-dbc2-4dcb-af69-6a0171a4f39b"
+                                            target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong>Leadership</strong>
+                                <ul>
+                                    <li>Class Chairperson (2023-2024)</li>
+                                    <li>
+                                        Vice-Captain of Wushu CCA (2024-2025)
+                                    </li>
+                                    <li>Peer Support Leader (2024-2025)</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong>Projects</strong>
+                                <ul>
+                                    <li>
+                                        Custom Unreal Engine 5 FPS Movement
+                                        System
+                                        <ul>
+                                            <li>
+                                                Modular C++ framework featuring
+                                                wall-running, sprinting,
+                                                crouch-sliding
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://github.com/thatgreyCat7777/Unreal-Fps-Movement"
+                                                    target="_blank"
+                                                    >[View on GitHub]</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong>Competitive Programming</strong>
+                                <ul>
+                                    <li>
+                                        Participated in CPIC 2025
+                                        <a href="image/P156.png" target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <iframe src="pdf/CS50x Cert.pdf" frameborder="0"></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Skills</h5>
+                        <ul class="card-text card-main">
+                            <li><b>Programming 💻</b></li>
+                            <ul>
+                                <li>
+                                    <strong>C++</strong> - Built modular Unreal
+                                    Engine 5 systems (FPS movement, 3D math)
+                                </li>
+                                <li>
+                                    <strong>C</strong> - Implemented image
+                                    processing algorithms (Sobel filter)
+                                </li>
+                                <li>
+                                    <strong>Python</strong> - CS50x projects,
+                                    competitive programming (CPIC SG)
+                                </li>
+                                <li>
+                                    <strong>HTML/CSS/JS</strong> - Developed
+                                    personal website from scratch
+                                </li>
+                            </ul>
+                            <li><b>Mathematics 📊</b></li>
+                            <ul>
+                                <li>
+                                    <strong>Linear Algebra</strong> - Derived 3D
+                                    rotation matrices for game physics
+                                </li>
+                                <li>
+                                    <strong>Algorithm Design</strong> - NOI/CPIC
+                                    training in optimization
+                                </li>
+                                <li>
+                                    <strong>Trigonometry</strong> - Created
+                                    interactive visualizations (Desmos)
+                                </li>
+                            </ul>
+
+                            <li><b>Game Development 🎮</b></li>
+                            <ul>
+                                <li>
+                                    <strong>Unreal Engine 5</strong> -
+                                    Architected C++ movement systems
+                                    (wall-running, sliding)
+                                </li>
+                            </ul>
+                            <li><b>Leadership 👥</b></li>
+                            <ul>
+                                <li>
+                                    <strong>Peer Mentoring</strong> - Designed
+                                    math lessons (unit circle proofs)
+                                </li>
+                                <li>
+                                    <strong>Team Leadership</strong> - Wushu
+                                    Vice-Captain, Peer Support Leader
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <iframe src="pdf/COP_Lim Zhi Yuan Devon.pdf"></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Achievements</h5>
+                        <ul class="card-text card-main">
+                            <li>
+                                <strong>Sterling Award</strong>
+                                <ul>
+                                    <li>
+                                        Best in Chemistry (Sec 3, 2024)
+                                        <a
+                                            href="pdf/Sterling cert chemistry.pdf"
+                                            target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                    <li>
+                                        Best in Physics (Sec 3, 2024)
+                                        <a
+                                            href="pdf/Sterling cert physics.pdf"
+                                            target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                    <li>Best in Science (Sec 2, 2023)</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong
+                                    >National Olympiad in Informatics</strong
+                                >
+                                <ul>
+                                    <li>
+                                        Certificate of Participation (2025)
+                                        <a
+                                            href="pdf/COP_Lim Zhi Yuan Devon.pdf"
+                                            target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong
+                                    >Singapore Junior Chemistry Olympiad</strong
+                                >
+                                <ul>
+                                    <li>Certificate of Merit (2025)</li>
+                                    <li>Certificate of Participation (2024)</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong
+                                    >Singapore Junior Physics Olympiad</strong
+                                >
+                                <ul>
+                                    <li>
+                                        Certificate of Participation (2024,
+                                        2025)
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong>Harvard University CS50x</strong>
+                                <ul>
+                                    <li>
+                                        Completed (edX, 2025)
+                                        <a
+                                            href="https://cs50.harvard.edu/certificates/254d1483-dbc2-4dcb-af69-6a0171a4f39b"
+                                            target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong>Leadership</strong>
+                                <ul>
+                                    <li>Class Chairperson (2023-2024)</li>
+                                    <li>
+                                        Vice-Captain of Wushu CCA (2024-2025)
+                                    </li>
+                                    <li>Peer Support Leader (2024-2025)</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong>Projects</strong>
+                                <ul>
+                                    <li>
+                                        Custom Unreal Engine 5 FPS Movement
+                                        System
+                                        <ul>
+                                            <li>
+                                                Modular C++ framework featuring
+                                                wall-running, sprinting,
+                                                crouch-sliding
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://github.com/thatgreyCat7777/Unreal-Fps-Movement"
+                                                    target="_blank"
+                                                    >[View on GitHub]</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <strong>Competitive Programming</strong>
+                                <ul>
+                                    <li>
+                                        Participated in CPIC 2025
+                                        <a href="image/P156.png" target="_blank"
+                                            >[View Cert]</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
