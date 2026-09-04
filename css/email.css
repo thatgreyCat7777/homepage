@@ -13,7 +13,7 @@
     position: relative;
     display: grid;
     place-items: center;
-    /* padding: 1.5rem 5rem; */
+    padding: 1.5rem 5rem;
     min-width: 100%;
     min-height: 48px;
 
@@ -31,12 +31,12 @@
     will-change: opacity;
     transition: opacity calc(var(--anim-speed, 1s) * 0.5) ease;
     opacity: 1;
-}
+} 
 #hint2 {
     opacity: 0;
 }
 
-.btn {
+.b {
     filter: drop-shadow(0 6px 2px #00000055) drop-shadow(0 14px 4px #00000055)
         drop-shadow(0 32px 8px #00000055) drop-shadow(0 64px 16px #00000055);
 
@@ -142,7 +142,7 @@
     }
 }
 
-.btn:hover {
+.b:hover {
     .txt {
         animation: txt-out calc(var(--anim-speed, 1s) * 0.5) forwards;
     }
@@ -201,7 +201,7 @@
     }
 }
 
-.btn::before {
+.b::before {
     content: "Address copied";
     position: absolute;
     inset: 0;
@@ -215,13 +215,13 @@
     opacity: 0;
 }
 
-.btn:active {
+.b:active {
     .txt-box {
         filter: contrast(1.4) brightness(1.4);
     }
 }
 
-.btn:focus {
+.b:focus {
     &::before {
         animation: appear calc(var(--anim-speed, 01s) * 1.5)
             cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;

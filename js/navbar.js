@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             for (let i = 0; i < nav.length; i++) {
                 if (
                     document.location.pathname.charAt(
-                        document.location.pathname.length - 1
+                        document.location.pathname.length - 1,
                     ) == "/"
                 ) {
                     nav[i].classList.add("active");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 if (
                     document.location.pathname.includes(
-                        nav[i].getAttribute("href")
+                        nav[i].getAttribute("href"),
                     )
                 ) {
                     nav[i].classList.add("active");
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(document.location.pathname);
             console.log(
                 document.location.pathname.charAt(
-                    document.location.pathname.length - 1
-                )
+                    document.location.pathname.length - 1,
+                ),
             );
         });
 });

@@ -2,9 +2,9 @@
 .card {
     width: 50vw;
     height: auto;
-    --bs-card-border-color: black;
+    --bs-card-border-color: Black;
     --bs-card-border-radius: 0px;
-    background-color: black;
+    background-color: Black;
 }
 
 .card-main {
@@ -18,11 +18,11 @@
     flex-direction: row;
 }
 
-.cards div {
-    /* flex: 1 0 0%; */
-    /* min-height: calc(calc(100vh - 83px) * 0.298); */
-    /* background-color: black; */
-}
+/* .cards div {
+    flex: 1 0 0%;
+    min-height: calc(calc(100vh - 83px) * 0.298);
+    background-color: Black;
+} */
 
 @media screen and (max-width: 1024px) {
     .cards {

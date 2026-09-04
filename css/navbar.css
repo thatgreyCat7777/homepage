@@ -31,11 +31,13 @@
     padding-right: 15px;
     border: 1px transparent;
     margin-right: 0px;
+    cursor: pointer;
 }
 
 .socials-icon a img {
     height: 30px;
     width: 30px;
+    cursor: pointer;
 }
 
 .active {
