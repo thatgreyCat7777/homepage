@@ -13,33 +13,6 @@
     text-decoration: underline;
 }
 
-.socials-list {
-    list-style: none;
-    flex: content;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.socials-icon {
-    display: inline;
-    flex: content;
-}
-
-.socials-icon a {
-    display: inline;
-    padding-left: 3px;
-    padding-right: 15px;
-    border: 1px transparent;
-    margin-right: 0px;
-    cursor: pointer;
-}
-
-.socials-icon a img {
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-}
-
 .active {
     color: #1b7fd7 !important;
 }
