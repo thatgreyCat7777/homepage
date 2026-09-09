@@ -20,7 +20,6 @@
     transform: translate(-50%, -50%);
     align-content: center;
     mix-blend-mode: difference;
-    backdrop-filter: blur(5px);
     font-family: Georgia, 'Times New Roman', Times, serif;
     -webkit-text-stroke: 0.3px black;
 }
