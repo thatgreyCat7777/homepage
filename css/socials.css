@@ -1,4 +1,3 @@
-/* From Uiverse.io by dovatgabriel */
 .socials-list svg {
     height: 25px;
 }
@@ -118,5 +117,15 @@
 
     100% {
         transform: scale(1);
+    }
+}
+
+.socials-div {
+    padding-left: 10px;
+}
+
+@media (max-width: 991px) {
+    .socials-div {
+        padding-left: 0px;
     }
 }

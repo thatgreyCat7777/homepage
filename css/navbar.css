@@ -17,21 +17,6 @@
     color: #1b7fd7 !important;
 }
 
-#nav li a:hover {
+.nav-link:hover {
     color: #1b7fd7 !important;
-}
-
-@media (max-width: 991px) {
-    .socials-list {
-        list-style: none;
-        flex: content;
-        margin-top: 10px;
-        margin-bottom: 0px;
-        padding-left: 0px;
-    }
-}
-
-.navbar {
-    /* Black background with 50% opacity */
-    /* background-color: rgba(0, 0, 0, 0.89) !important; */
 }
