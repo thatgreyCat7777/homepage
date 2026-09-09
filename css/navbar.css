@@ -1,4 +1,49 @@
 /* Navbar styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+
+    .nav-item {
+        background-color: black;
+    }
+
+    .nav-item:hover {
+        background-color: #e7e7e7;
+    }
+
+    .active {
+        color: #1b7fd7 !important;
+    }
+
+    .active:hover {
+        color: white !important;
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color-scheme: light;
+    }
+
+    .active {
+        color: blue !important;
+    }
+
+    .active:hover {
+        color: white !important;
+    }
+
+    .nav-item {
+        background-color: white;
+    }
+
+    .nav-item:hover {
+        background-color: black;
+    }
+}
+
 .site-title {
     font-family: Luminari;
     font-weight: 900;
@@ -13,10 +58,16 @@
     text-decoration: underline;
 }
 
-.active {
-    color: #1b7fd7 !important;
+.nav-link:hover {
+    color: white;
+    mix-blend-mode: difference;
 }
 
-.nav-link:hover {
-    color: #1b7fd7 !important;
+.nav-item {
+    transition: background-color 0.67s ease;
+    transition: font-size 0.67s ease;
+}
+
+.nav-item:hover {
+    font-size: larger;
 }

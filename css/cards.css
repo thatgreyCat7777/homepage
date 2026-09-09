@@ -1,14 +1,41 @@
 /* Card styles */
+
+@media (prefers-color-scheme: dark) {
+    .card {
+        background-color: black;
+        --bs-card-border-color: black;
+    }
+
+    .card-main {
+        color: #cbcbcb;
+    }
+
+    .card div h5 {
+        color: #86b7fe;
+    }
+}
+@media (prefers-color-scheme: light) {
+    .card {
+        background-color: white;
+        --bs-card-border-color: white;
+    }
+
+    .card-main {
+        color: black;
+    }
+
+    .card div h5 {
+        color: blue;
+    }
+}
+
 .card {
     width: 50vw;
     height: auto;
-    --bs-card-border-color: Black;
     --bs-card-border-radius: 0px;
-    background-color: Black;
 }
 
 .card-main {
-    color: #cbcbcb;
     font-size: 97%;
     text-wrap: balance;
 }
@@ -60,7 +87,6 @@
 }
 
 .card div h5 {
-    color: #86b7fe;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 220%;
 }
