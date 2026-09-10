@@ -1,15 +1,33 @@
-function applyTheme() {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+// Function to get current theme
+// * Returns true if dark, and false if light 
+function getCurrentTheme() {
+    // Check if user previously saved a preference on this website
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        return savedTheme == "dark";
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+// Function to apply styles to match current theme
+function applyTheme(dark) {
+    // * Dark is true when the current theme is dark
+    if (dark) {
         document.querySelector(".navbar").classList.remove("bg-white");
         document.querySelector(".navbar").classList.remove("navbar-light");
         document.querySelector(".navbar").classList.add("bg-black");
         document.querySelector(".navbar").classList.add("navbar-dark");
+        document.documentElement.style.removeProperty("color-scheme");
+        document.documentElement.style.setProperty("color-scheme", "dark");
+        document.querySelector(".input").checked = true;
     } else {
         document.querySelector(".navbar").classList.remove("bg-black");
         document.querySelector(".navbar").classList.remove("navbar-dark");
         document.querySelector(".navbar").classList.add("bg-white");
         document.querySelector(".navbar").classList.add("navbar-light");
+        document.documentElement.style.removeProperty("color-scheme");
+        document.documentElement.style.setProperty("color-scheme", "light");
     }
+    localStorage.setItem("theme", dark); 
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -21,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         // Checks which page the user is in and activates the correct page based off it
         .then((data) => {
-            var nav = document.querySelectorAll(".nav-link");
+            let nav = document.querySelectorAll(".nav-link");
             for (let i = 0; i < nav.length; i++) {
                 if (
                     document.location.pathname.charAt(
@@ -47,39 +65,31 @@ document.addEventListener("DOMContentLoaded", function () {
                     this.classList.add("active");
                 });
             }
-            console.log(document.location.pathname);
-            console.log(
-                document.location.pathname.charAt(
-                    document.location.pathname.length - 1,
-                ),
-            );
-            applyTheme();
+            // console.log(document.location.pathname);
+            // console.log(
+            //     document.location.pathname.charAt(
+            //         document.location.pathname.length - 1,
+            //     ),
+            // );
+
+            applyTheme(getCurrentTheme());
             window
                 .matchMedia("(prefers-color-scheme: dark)")
                 .addEventListener("change", (e) => {
-                    applyTheme();
+                    applyTheme(!getCurrentTheme()); // ! Not sure using false works
+                    
                 });
+            const themeButton = document.querySelector(".switch");
+            themeButton.addEventListener("click", function () {
+                if (localStorage.getItem("theme")) {
+                    applyTheme(!getCurrentTheme());
+                }
+            });
         });
-    
 });
 
 //
 // const toggleBtn = document.getElementById("theme-toggle");
-
-// // Function to calculate the correct theme
-// function getInitialTheme() {
-//     // Check if user previously saved a preference on this website
-//     const savedTheme = localStorage.getItem("theme");
-//     if (savedTheme) {
-//         return savedTheme;
-//     }
-
-//     // Fallback to checking the system preferences
-//     const systemPrefersDark = window.matchMedia(
-//         "(prefers-color-scheme: dark)",
-//     ).matches;
-//     return systemPrefersDark ? "dark" : "light";
-// }
 
 // // Function to apply the theme to the HTML element
 // function applyTheme(theme) {
