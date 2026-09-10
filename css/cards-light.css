@@ -1,0 +1,12 @@
+.card {
+    background-color: white;
+    --bs-card-border-color: white;
+}
+
+.card-main {
+    color: black;
+}
+
+.card div h5 {
+    color: blue;
+}

@@ -1,4 +1,9 @@
 /* Style for theme-switch */
+@media (max-width: 991px) {
+    .switch-div {
+        padding-top: 10px;
+    }
+}
 .switch {
     font-size: 17px;
     position: relative;

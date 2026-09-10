@@ -1,0 +1,17 @@
+/* Light mode styling */
+
+.active {
+    color: blue !important;
+}
+
+.active:hover {
+    color: white !important;
+}
+
+.nav-item {
+    background-color: white;
+}
+
+.nav-item:hover {
+    background-color: black;
+}

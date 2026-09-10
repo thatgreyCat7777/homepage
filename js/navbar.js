@@ -1,33 +1,48 @@
 // Function to get current theme
-// * Returns true if dark, and false if light 
+// * Returns true if dark, and false if light
 function getCurrentTheme() {
     // Check if user previously saved a preference on this website
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-        return savedTheme == "dark";
+    if (savedTheme != null) {
+        return savedTheme;
     }
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 // Function to apply styles to match current theme
 function applyTheme(dark) {
     // * Dark is true when the current theme is dark
-    if (dark) {
+    console.log(`meow ${dark}`); 
+    if (dark === true) {
+        // Remove old theme class
         document.querySelector(".navbar").classList.remove("bg-white");
         document.querySelector(".navbar").classList.remove("navbar-light");
+        // Add new theme class
         document.querySelector(".navbar").classList.add("bg-black");
         document.querySelector(".navbar").classList.add("navbar-dark");
+        // Set root theme
         document.documentElement.style.removeProperty("color-scheme");
         document.documentElement.style.setProperty("color-scheme", "dark");
+        // Set style sheet
+        document.querySelector(".navbar-light-dark").href = "css/navbar-dark.css"
+        document.querySelector(".cards-light-dark").href = "css/cards-dark.css"
+        // Set button
         document.querySelector(".input").checked = true;
     } else {
+        // Remove old theme class
         document.querySelector(".navbar").classList.remove("bg-black");
         document.querySelector(".navbar").classList.remove("navbar-dark");
+        // Add new theme class
         document.querySelector(".navbar").classList.add("bg-white");
         document.querySelector(".navbar").classList.add("navbar-light");
+        // Set root theme
         document.documentElement.style.removeProperty("color-scheme");
         document.documentElement.style.setProperty("color-scheme", "light");
+        // Set style sheet
+        document.querySelector(".navbar-light-dark").href = "css/navbar-light.css"
+        document.querySelector(".cards-light-dark").href = "css/cards-light.css"
     }
-    localStorage.setItem("theme", dark); 
+    localStorage.setItem("theme", dark);
+    console.log(localStorage.getItem("theme"));
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -71,19 +86,18 @@ document.addEventListener("DOMContentLoaded", function () {
             //         document.location.pathname.length - 1,
             //     ),
             // );
-
+            // localStorage.clear();
+            console.log(`hello: ${localStorage.getItem("theme")}`);
+            // * Applies theme to page
             applyTheme(getCurrentTheme());
             window
                 .matchMedia("(prefers-color-scheme: dark)")
-                .addEventListener("change", (e) => {
-                    applyTheme(!getCurrentTheme()); // ! Not sure using false works
-                    
+                .addEventListener("change", (event) => {
+                    applyTheme(getCurrentTheme()); // ! Not sure using false works
                 });
             const themeButton = document.querySelector(".switch");
             themeButton.addEventListener("click", function () {
-                if (localStorage.getItem("theme")) {
-                    applyTheme(!getCurrentTheme());
-                }
+                applyTheme(document.querySelector(".input").checked);
             });
         });
 });

@@ -1,0 +1,16 @@
+/* Dark mode styling */
+.nav-item {
+    background-color: black;
+}
+
+.nav-item:hover {
+    background-color: #e7e7e7;
+}
+
+.active {
+    color: #1b7fd7 !important;
+}
+
+.active:hover {
+    color: white !important;
+}
