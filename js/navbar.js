@@ -1,5 +1,3 @@
-// TODO - Add theme saving (somehow still doesnt work :( )
-
 // Function to get current theme
 // * Returns true if dark, and false if light
 function getCurrentTheme() {
@@ -14,7 +12,7 @@ function getCurrentTheme() {
 function applyTheme(dark) {
     // * Dark is true when the current theme is dark
     console.log(`meow ${dark}`);
-    if (dark === true) {
+    if (dark === "true" || dark === true) {
         // Remove old theme class
         document.querySelector(".navbar").classList.remove("bg-white");
         document.querySelector(".navbar").classList.remove("navbar-light");
@@ -45,10 +43,10 @@ function applyTheme(dark) {
         document.documentElement.style.setProperty("color-scheme", "light");
         // Set style sheet
         document.querySelector(".navbar-light-dark").href =
-            "css/navbar-light.css";
+        "css/navbar-light.css";
         if (document.querySelector(".cards-light-dark")) {
             document.querySelector(".cards-light-dark").href =
-                "css/cards-light.css";
+            "css/cards-light.css";
         }
     }
     localStorage.setItem("theme", dark);
@@ -100,13 +98,14 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(`hello: ${localStorage.getItem("theme")}`);
             // * Applies theme to page
             applyTheme(getCurrentTheme());
-            window
-                .matchMedia("(prefers-color-scheme: dark)")
-                .addEventListener("change", (event) => {
-                    applyTheme(getCurrentTheme()); // ! Not sure using false works
-                });
-            const themeButton = document.querySelector(".switch");
-            themeButton.addEventListener("click", function () {
+            const media = window.matchMedia("(prefers-color-scheme: dark)");
+            media.addEventListener("change", function (event) {
+                if (localStorage.getItem("theme") === null) {
+                    applyTheme(event.matches);
+                }
+            });
+            const themeButton = document.querySelector(".input");
+            themeButton.addEventListener("change", function () {
                 applyTheme(document.querySelector(".input").checked);
             });
         });
