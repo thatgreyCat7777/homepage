@@ -1,3 +1,5 @@
+// TODO - Add theme saving (somehow still doesnt work :( )
+
 // Function to get current theme
 // * Returns true if dark, and false if light
 function getCurrentTheme() {
@@ -11,7 +13,7 @@ function getCurrentTheme() {
 // Function to apply styles to match current theme
 function applyTheme(dark) {
     // * Dark is true when the current theme is dark
-    console.log(`meow ${dark}`); 
+    console.log(`meow ${dark}`);
     if (dark === true) {
         // Remove old theme class
         document.querySelector(".navbar").classList.remove("bg-white");
@@ -23,8 +25,12 @@ function applyTheme(dark) {
         document.documentElement.style.removeProperty("color-scheme");
         document.documentElement.style.setProperty("color-scheme", "dark");
         // Set style sheet
-        document.querySelector(".navbar-light-dark").href = "css/navbar-dark.css"
-        document.querySelector(".cards-light-dark").href = "css/cards-dark.css"
+        document.querySelector(".navbar-light-dark").href =
+            "css/navbar-dark.css";
+        if (document.querySelector(".cards-light-dark")) {
+            document.querySelector(".cards-light-dark").href =
+                "css/cards-dark.css";
+        }
         // Set button
         document.querySelector(".input").checked = true;
     } else {
@@ -38,8 +44,12 @@ function applyTheme(dark) {
         document.documentElement.style.removeProperty("color-scheme");
         document.documentElement.style.setProperty("color-scheme", "light");
         // Set style sheet
-        document.querySelector(".navbar-light-dark").href = "css/navbar-light.css"
-        document.querySelector(".cards-light-dark").href = "css/cards-light.css"
+        document.querySelector(".navbar-light-dark").href =
+            "css/navbar-light.css";
+        if (document.querySelector(".cards-light-dark")) {
+            document.querySelector(".cards-light-dark").href =
+                "css/cards-light.css";
+        }
     }
     localStorage.setItem("theme", dark);
     console.log(localStorage.getItem("theme"));
