@@ -38,6 +38,7 @@
 .map-cities {
     width: 100%;
 }
+
 .map-city {
     border-radius: var(--city-radius);
     left: calc(var(--x) * 1% - var(--city-radius));
@@ -45,10 +46,12 @@
     position: absolute;
     top: calc(var(--y) * 1% - var(--city-radius));
 }
+
 .map-city::after,
 .map-city::before {
     font-size: var(--city-pin-size-font);
 }
+
 .map-city::before {
     content: "•";
     left: calc(-50% + var(--city-radius));
@@ -58,6 +61,7 @@
     text-shadow: 0 1px 1px #000;
     width: 100%;
 }
+
 .map-city::after {
     clip-path: inset(-0.5em 0 0 0);
     content: "📍";
@@ -79,6 +83,7 @@
     width: 10em;
     z-index: 999;
 }
+
 .map-city__sign {
     align-items: center;
     background-color: var(--city-sign-color-back);
@@ -98,6 +103,7 @@
     text-wrap: nowrap;
     width: max-content;
 }
+
 .map-city__sign::before {
     content: attr(data-icon);
 }
@@ -122,10 +128,12 @@
     animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
+
 .map-city:hover .map-city__sign.anim-grow::before {
     animation-name: grow;
     animation-timing-function: ease-in;
 }
+
 .map-city:hover .map-city__sign.anim-slidein::before {
     animation-name: slidein;
     animation-timing-function: ease-out;

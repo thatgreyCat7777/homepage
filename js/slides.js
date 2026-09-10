@@ -2,7 +2,7 @@ function playVideo() {
     var video = document.querySelector(".carousel-item-end video");
     console.log(video);
     if (video) {
-        video.currentTime = 0; 
+        video.currentTime = 0;
     }
 }
 function autoClickButton() {
