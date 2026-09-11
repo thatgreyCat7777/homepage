@@ -1,8 +1,12 @@
+var locked = false;
 function playVideo() {
-    var video = document.querySelector(".carousel-item-end video");
-    console.log(video);
-    if (video) {
-        video.currentTime = 0;
+    if (locked === false) {
+        var video = document.querySelector(".carousel-item-end video");
+        console.log(video);
+        if (video != null) {
+            video.currentTime = 0;
+        }
+        locked = true;
     }
 }
 function autoClickButton() {
@@ -28,22 +32,28 @@ window.onload = function () {
             playVideo();
         });
     }
-    // TODO - Make play video work when pressing arrow keys to navigate slides
     for (var i = 0, len = buttons.length; i < len; i++) {
         buttons[i].addEventListener("click", function () {
-            interval = resetInterval(interval);
-            playVideo();
+            if (locked === false) {
+                interval = resetInterval(interval);
+                playVideo();
+            }
         });
     }
     document.addEventListener("keydown", function (event) {
-        if ([37, 65].includes(event.key)) {
+        if (["ArrowLeft", "a"].includes(event.key)) {
             document.querySelector("#previous").click();
-            playVideo();
-        } else if ([39, 68].includes(event.key)) {
+        } else if (["ArrowRight", "d"].includes(event.key)) {
             document.querySelector("#next").click();
-            playVideo();
         }
     });
+
+    // Added interval
+    document
+        .querySelector(".carousel")
+        .addEventListener("slid.bs.carousel", () => {
+            locked = false;
+        });
 };
 // var viewportWidth = window.innerWidth;
 // var viewportHeight = window.innerHeight;
