@@ -48,3 +48,14 @@
 .slide-title a:hover {
     text-decoration: underline;
 }
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators {
+    color: white;
+    mix-blend-mode: difference;
+}
+
+#cats-img {
+    object-fit: contain;
+}

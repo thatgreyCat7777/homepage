@@ -22,12 +22,16 @@ function applyTheme(dark) {
         // Set root theme
         document.documentElement.style.removeProperty("color-scheme");
         document.documentElement.style.setProperty("color-scheme", "dark");
-        // Set style sheet
+        // Set style sheets
         document.querySelector(".navbar-light-dark").href =
             "css/navbar-dark.css";
         if (document.querySelector(".cards-light-dark")) {
             document.querySelector(".cards-light-dark").href =
                 "css/cards-dark.css";
+        }
+        if (document.querySelector(".slides-light-dark")) {
+            document.querySelector(".slides-light-dark").href =
+                "css/slides-dark.css";
         }
         // Set button
         document.querySelector(".input").checked = true;
@@ -41,12 +45,16 @@ function applyTheme(dark) {
         // Set root theme
         document.documentElement.style.removeProperty("color-scheme");
         document.documentElement.style.setProperty("color-scheme", "light");
-        // Set style sheet
+        // Set style sheets
         document.querySelector(".navbar-light-dark").href =
             "css/navbar-light.css";
         if (document.querySelector(".cards-light-dark")) {
             document.querySelector(".cards-light-dark").href =
                 "css/cards-light.css";
+        }
+        if (document.querySelector(".slides-light-dark")) {
+            document.querySelector(".slides-light-dark").href =
+                "css/slides-light.css";
         }
     }
     localStorage.setItem("theme", dark);
