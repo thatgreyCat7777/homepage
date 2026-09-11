@@ -1,10 +1,28 @@
-const BATCHSIZE = 1;
-var locked = false;
+const BATCHSIZE = 1; // ! NO more than 10
+const MAX_SLIDES = 30; // Max inclusive
+var locked = false; // Helps create interval for loading
+var size = 7; // Keeps track of how many slides there currently are
+
 // Num argument tells how many images to fetch
 function get_cat(num = 7) {
     const url = "https://api.thecatapi.com/v1/images/search" + `?limit=${num}`;
     return async () => (await fetch(url)).json();
 }
+
+// Removes excess cat pics
+function remove_cats(top) {
+    for (let i = 0; i < BATCHSIZE; i++) {
+        if (top === false) {
+            document.querySelector(".carousel-inner").firstElementChild.remove();
+        }
+        else {
+            document.querySelector(".carousel-inner").lastElementChild.remove();
+        }
+        size -= BATCHSIZE;
+    }
+}
+
+// Loads cats into the carousel and checks if there is too much cats 
 function load_cats(append) {
     if (locked === false) {
         data = get_cat(BATCHSIZE);
@@ -29,8 +47,13 @@ function load_cats(append) {
             }
         });
         locked = true;
+        size += BATCHSIZE;
+        if (size > MAX_SLIDES) {
+            remove_cats(!append);
+        }
     }
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // Init
@@ -52,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         leftButton.addEventListener("click", () => load_cats(false));
     }
 
+    // Keyboard presses
     document.addEventListener("keydown", function (event) {
         if (locked === false) {
             if (["ArrowLeft", "a"].includes(event.key)) {
