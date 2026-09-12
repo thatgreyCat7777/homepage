@@ -16,11 +16,10 @@
     flex-direction: row;
 }
 
-/* .cards div {
+.cards div {
     flex: 1 0 0%;
     min-height: calc(calc(100vh - 83px) * 0.298);
-    background-color: Black;
-} */
+}
 
 @media screen and (max-width: 1024px) {
     .cards {
