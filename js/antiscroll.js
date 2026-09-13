@@ -1,3 +1,4 @@
+// Prevents autofocus from iframe elements
 (function () {
     if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual";
